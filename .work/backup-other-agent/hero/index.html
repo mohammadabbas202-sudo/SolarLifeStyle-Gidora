@@ -1,0 +1,392 @@
+<!-- Standalone section: Hero - Use in other projects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section – SolarLifeStyle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#f4f5f1',
+            foreground: '#0e1a12',
+            primary: { DEFAULT: '#1e8538', strong: '#176c2d', foreground: '#ffffff' },
+            leaf: { DEFAULT: '#57c76a', soft: '#ddf3d9' },
+            forest: { DEFAULT: '#0b2414', foreground: '#e8f3e6' },
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --background: #f4f5f1;
+      --forest: #0b2414;
+    }
+
+    @keyframes fog-drift {
+      0% { transform: translate(-6%); }
+      100% { transform: translate(6%); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .fog-slow { animation: 38s ease-in-out infinite alternate-reverse fog-drift; }
+    .fog-fast { animation: 26s ease-in-out infinite alternate fog-drift; }
+    .star { animation: 3.6s ease-in-out infinite twinkle; }
+
+    .house-mask {
+      -webkit-mask-image: linear-gradient(#0000 0%, #000 34% 84%, #0000 100%), linear-gradient(90deg, #0000 0%, #000 9% 91%, #0000 100%);
+      mask-image: linear-gradient(#0000 0%, #000 34% 84%, #0000 100%), linear-gradient(90deg, #0000 0%, #000 9% 91%, #0000 100%);
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
+    }
+
+    .mode-morning { background: linear-gradient(180deg, #dcdccb 0%, #e9e7db 50%, #e4e2d4 100%); }
+    .mode-night { background: linear-gradient(180deg, #10171e 0%, #182230 50%, #0d1922 100%); }
+
+    .btn-active {
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 14px 30px -18px rgba(14,26,18,0.55);
+    }
+    .btn-active-night {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(12px);
+    }
+
+    * { transition-property: color, background-color, opacity; }
+  </style>
+</head>
+<body class="overflow-x-hidden" style="background:#f4f5f1;">
+
+<!-- HERO SECTION -->
+<section id="hero" style="position:relative; height:175svh; background:#f4f5f1;">
+  <div id="sticky-container" style="position:sticky; top:0; height:100svh; overflow:hidden;">
+
+    <!-- Background layer -->
+    <div id="bg-layer" class="absolute inset-0 overflow-hidden" style="transition: clip-path 0.1s, border-radius 0.1s;">
+      <div id="bg-scale" class="absolute inset-0">
+
+        <!-- Morning gradient background -->
+        <div id="morning-bg" class="absolute inset-0 mode-morning" style="transition: opacity 1.4s ease-in-out;"></div>
+        <!-- Night gradient background -->
+        <div id="night-bg" class="absolute inset-0 mode-night" style="opacity:0; transition: opacity 1.4s ease-in-out;"></div>
+
+        <!-- Morning sun glow -->
+        <div id="sun-glow" class="absolute rounded-full" style="right:-12%; top:-24%; width:70vmax; height:70vmax; background:radial-gradient(closest-side, rgba(255,221,180,0.55), rgba(255,221,180,0) 70%); transition: opacity 1.4s;"></div>
+
+        <!-- House placeholder (morning) -->
+        <div id="morning-house" class="house-mask absolute" style="bottom:12%; left:50%; transform:translateX(-50%); width:110%; aspect-ratio:16/9; background:linear-gradient(160deg, #c8d4c0 0%, #9fb89a 30%, #bec9b8 60%, #d2dace 100%); border-radius:12px 12px 0 0; transition: opacity 1.2s;">
+          <!-- Stylized house silhouette -->
+          <svg viewBox="0 0 1200 500" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#d4d4c0;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#c0c4a8;stop-opacity:1" />
+              </linearGradient>
+              <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#ede8e0;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#d6cfc2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <!-- Sky -->
+            <rect width="1200" height="500" fill="url(#skyGrad)"/>
+            <!-- Trees silhouette -->
+            <ellipse cx="150" cy="320" rx="90" ry="110" fill="#8a9e7a" opacity="0.5"/>
+            <ellipse cx="1060" cy="340" rx="80" ry="100" fill="#8a9e7a" opacity="0.5"/>
+            <!-- Main house body -->
+            <rect x="200" y="300" width="800" height="180" fill="url(#wallGrad)"/>
+            <!-- Roof left side -->
+            <polygon points="150,300 600,160 600,300" fill="#2a3038"/>
+            <!-- Roof right side -->
+            <polygon points="600,160 1050,300 600,300" fill="#20262e"/>
+            <!-- Solar panels on roof -->
+            <g fill="#1a2850" opacity="0.9">
+              <rect x="220" y="210" width="55" height="35" rx="3" transform="rotate(-31,247,227)"/>
+              <rect x="285" y="186" width="55" height="35" rx="3" transform="rotate(-31,312,203)"/>
+              <rect x="350" y="162" width="55" height="35" rx="3" transform="rotate(-31,377,179)"/>
+              <rect x="415" y="138" width="55" height="35" rx="3" transform="rotate(-31,442,155)"/>
+              <rect x="720" y="175" width="55" height="35" rx="3" transform="rotate(-149,747,192)"/>
+              <rect x="790" y="200" width="55" height="35" rx="3" transform="rotate(-149,817,217)"/>
+              <rect x="860" y="225" width="55" height="35" rx="3" transform="rotate(-149,887,242)"/>
+              <rect x="930" y="250" width="55" height="35" rx="3" transform="rotate(-149,957,267)"/>
+            </g>
+            <!-- Windows -->
+            <rect x="260" y="340" width="80" height="90" fill="#b8d4e8" rx="4"/>
+            <rect x="420" y="340" width="80" height="90" fill="#b8d4e8" rx="4"/>
+            <!-- Door -->
+            <rect x="560" y="370" width="80" height="110" fill="#8d6e4a" rx="4"/>
+            <!-- Porch -->
+            <rect x="530" y="350" width="140" height="8" fill="#9b8060" rx="2"/>
+            <rect x="540" y="358" width="4" height="52" fill="#9b8060"/>
+            <rect x="666" y="358" width="4" height="52" fill="#9b8060"/>
+            <!-- Right windows -->
+            <rect x="780" y="340" width="70" height="80" fill="#b8d4e8" rx="4"/>
+            <rect x="940" y="340" width="70" height="80" fill="#b8d4e8" rx="4"/>
+            <!-- Ground fog -->
+            <ellipse cx="600" cy="490" rx="700" ry="80" fill="rgba(220,220,200,0.6)"/>
+          </svg>
+        </div>
+
+        <!-- House placeholder (night) -->
+        <div id="night-house" class="house-mask absolute" style="bottom:12%; left:50%; transform:translateX(-50%); width:110%; aspect-ratio:16/9; background:linear-gradient(160deg, #0d1520 0%, #1a2535 50%, #0d1520 100%); border-radius:12px 12px 0 0; opacity:0; transition: opacity 1.2s;">
+          <svg viewBox="0 0 1200 500" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#0a1520;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a2535;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect width="1200" height="500" fill="url(#nightSky)"/>
+            <!-- Night trees -->
+            <ellipse cx="150" cy="320" rx="90" ry="110" fill="#0d1a0d" opacity="0.8"/>
+            <ellipse cx="1060" cy="340" rx="80" ry="100" fill="#0d1a0d" opacity="0.8"/>
+            <!-- House body -->
+            <rect x="200" y="300" width="800" height="180" fill="#1e2830"/>
+            <!-- Roof -->
+            <polygon points="150,300 600,160 600,300" fill="#121820"/>
+            <polygon points="600,160 1050,300 600,300" fill="#0e1218"/>
+            <!-- Windows lit up -->
+            <rect x="260" y="340" width="80" height="90" fill="#f0c060" rx="4" opacity="0.9"/>
+            <rect x="420" y="340" width="80" height="90" fill="#e8b840" rx="4" opacity="0.8"/>
+            <rect x="560" y="370" width="80" height="110" fill="#8d6e4a" rx="4"/>
+            <rect x="780" y="340" width="70" height="80" fill="#f0c060" rx="4" opacity="0.7"/>
+            <rect x="940" y="340" width="70" height="80" fill="#d4a030" rx="4" opacity="0.6"/>
+            <!-- Porch light -->
+            <circle cx="600" cy="355" r="12" fill="#f8e060" opacity="0.9"/>
+            <ellipse cx="600" cy="380" rx="30" ry="20" fill="rgba(248,224,96,0.2)"/>
+            <!-- Ground fog night -->
+            <ellipse cx="600" cy="490" rx="700" ry="80" fill="rgba(30,40,55,0.6)"/>
+          </svg>
+        </div>
+
+        <!-- Night stars -->
+        <div id="night-stars" class="absolute inset-0" style="opacity:0; transition: opacity 1.6s;">
+          <div class="absolute rounded-full bg-white" style="right:17%;top:17%;width:2.5rem;height:2.5rem;opacity:0.85;box-shadow:0 0 48px 14px rgba(206,218,240,0.28);border-radius:9999px;"></div>
+          <span class="star absolute rounded-full bg-white" style="left:7%;top:3%;width:3px;height:3px;animation-delay:0s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:18.9%;top:12.7%;width:2px;height:2px;animation-delay:1.83s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:44.3%;top:20.9%;width:1.5px;height:1.5px;animation-delay:0.61s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:56.2%;top:30.6%;width:3px;height:3px;animation-delay:2.44s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:81.6%;top:38.8%;width:1.5px;height:1.5px;animation-delay:1.22s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:93.5%;top:4.5%;width:1.5px;height:1.5px;animation-delay:3.05s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:30.8%;top:22.4%;width:2px;height:2px;animation-delay:0.06s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:68.1%;top:40.3%;width:1.5px;height:1.5px;animation-delay:0.67s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:5.4%;top:14.2%;width:3px;height:3px;animation-delay:1.28s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:42.7%;top:32.1%;width:2px;height:2px;animation-delay:1.89s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:80%;top:6%;width:1.5px;height:1.5px;animation-delay:2.5s;"></span>
+          <span class="star absolute rounded-full bg-white" style="left:17.3%;top:23.9%;width:1.5px;height:1.5px;animation-delay:3.11s;"></span>
+        </div>
+
+        <!-- Fog layers -->
+        <div class="fog-slow absolute pointer-events-none" style="left:-15%;right:-15%;top:22%;height:34%;">
+          <div id="fog-morning" class="absolute inset-0" style="background:radial-gradient(50% 50% at 30% 50%,rgba(244,241,230,0.65),transparent),radial-gradient(45% 45% at 75% 55%,rgba(244,241,230,0.5),transparent); transition:opacity 1.4s;"></div>
+          <div id="fog-night-mid" class="absolute inset-0" style="opacity:0;background:radial-gradient(50% 50% at 30% 50%,rgba(70,84,98,0.45),transparent),radial-gradient(45% 45% at 75% 55%,rgba(70,84,98,0.35),transparent); transition:opacity 1.4s;"></div>
+        </div>
+
+        <!-- Bottom fog -->
+        <div class="fog-fast absolute pointer-events-none" style="left:-15%;right:-15%;bottom:2%;height:36%;">
+          <div id="fog-bottom-morning" class="absolute inset-0" style="background:radial-gradient(45% 55% at 25% 60%,rgba(238,236,224,0.8),transparent),radial-gradient(40% 50% at 70% 70%,rgba(238,236,224,0.7),transparent); transition:opacity 1.4s;"></div>
+          <div id="fog-bottom-night" class="absolute inset-0" style="opacity:0;background:radial-gradient(45% 55% at 25% 60%,rgba(52,64,76,0.6),transparent),radial-gradient(40% 50% at 70% 70%,rgba(52,64,76,0.5),transparent); transition:opacity 1.4s;"></div>
+        </div>
+
+        <!-- Atmospheric vignette morning -->
+        <div id="vignette-morning" class="absolute inset-0" style="transition:opacity 1.4s;">
+          <div class="absolute inset-x-0 top-0 h-5/12" style="background:linear-gradient(to bottom, rgba(233,231,219,0.8), rgba(233,231,219,0.3), transparent);"></div>
+          <div class="absolute inset-x-0 bottom-0 h-1/3" style="background:linear-gradient(to top, #e4e2d4, rgba(228,226,212,0.55), transparent);"></div>
+        </div>
+        <!-- Atmospheric vignette night -->
+        <div id="vignette-night" class="absolute inset-0" style="opacity:0; transition:opacity 1.4s;">
+          <div class="absolute inset-x-0 top-0 h-5/12" style="background:linear-gradient(to bottom, rgba(18,25,32,0.75), rgba(18,25,32,0.25), transparent);"></div>
+          <div class="absolute inset-x-0 bottom-0 h-1/3" style="background:linear-gradient(to top, #151c23, rgba(21,28,35,0.6), transparent);"></div>
+        </div>
+
+        <!-- Scroll curtain -->
+        <div id="scroll-curtain" class="absolute inset-0 pointer-events-none" style="background:rgba(11,36,20,0.8); opacity:0; transition:opacity 0.3s;"></div>
+      </div>
+    </div>
+
+    <!-- Foreground content -->
+    <div id="hero-content" class="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-between px-4 pb-8 pt-28 text-center sm:px-6 sm:pb-10 sm:pt-32 lg:px-8" style="transition:opacity 0.5s;">
+
+      <!-- Main Heading -->
+      <div>
+        <h1 id="hero-title" class="font-heading text-5xl font-normal leading-tight tracking-tighter sm:text-6xl lg:text-8xl" style="letter-spacing:-0.05em;">
+          <span id="line1" class="block transition-colors duration-1000" style="color:#176c2d;">Sun by day.</span>
+          <span id="line2" class="block transition-colors duration-1000" style="color:rgba(23,108,45,0.6);">Storage by night.</span>
+        </h1>
+      </div>
+
+      <!-- Mode Switcher Card -->
+      <div class="w-full max-w-md">
+        <div class="flex flex-col items-center gap-5">
+          <div role="group" aria-label="Time of day" id="switcher"
+            class="grid w-full grid-cols-2 gap-1 rounded-2xl p-1.5 ring-1 backdrop-blur-xl"
+            style="background:rgba(255,255,255,0.35); ring-color:rgba(255,255,255,0.6); transition:background 0.7s, border-color 0.7s;">
+
+            <!-- Morning button -->
+            <button type="button" id="btn-morning" onclick="setMode('morning')"
+              class="relative min-h-16 rounded-xl px-3 py-3 focus-visible:outline-none transition-transform active:scale-95">
+              <span id="morning-bg-btn" class="absolute inset-0 rounded-xl" style="background:rgba(255,255,255,0.85); box-shadow:0 14px 30px -18px rgba(14,26,18,0.55);"></span>
+              <span id="morning-label" class="relative flex items-center justify-center gap-2 text-base font-medium" style="color:#0b2414;">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                Morning
+              </span>
+              <span id="morning-sub" class="relative mt-0.5 block text-xs" style="color:rgba(11,36,20,0.6);">Panels charge the battery</span>
+            </button>
+
+            <!-- Night button -->
+            <button type="button" id="btn-night" onclick="setMode('night')"
+              class="relative min-h-16 rounded-xl px-3 py-3 focus-visible:outline-none transition-transform active:scale-95">
+              <span id="night-bg-btn" class="absolute inset-0 rounded-xl" style="opacity:0; background:rgba(255,255,255,0.2); backdrop-filter:blur(12px); transition:opacity 0.5s;"></span>
+              <span id="night-label" class="relative flex items-center justify-center gap-2 text-base font-medium" style="color:rgba(11,36,20,0.65);">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                Night
+              </span>
+              <span id="night-sub" class="relative mt-0.5 block text-xs" style="color:rgba(11,36,20,0.5);">Battery covers the peak</span>
+            </button>
+          </div>
+
+          <!-- Description text -->
+          <div aria-live="polite" class="min-h-13">
+            <p id="hero-desc" class="text-sm leading-relaxed transition-colors duration-700 sm:text-base" style="color:rgba(11,36,20,0.75);">
+              SolarLifeStyle forecasts every sunrise across your portfolio and stores the surplus instead of selling it at the day's cheapest hour.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll text overlay -->
+    <p id="scroll-text" aria-hidden="true"
+      class="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center font-heading font-light text-white"
+      style="font-size:clamp(2rem,5vw,5rem); letter-spacing:-0.04em; opacity:0; transform:translateY(-50%) scale(0.92); filter:blur(12px); transition:opacity 0.5s, transform 0.5s, filter 0.5s;">
+      Every megawatt, accounted for.
+    </p>
+  </div>
+</section>
+
+<!-- Spacer to trigger scroll animations in standalone mode -->
+<div style="height:200px; background:#f4f5f1;"></div>
+
+<script>
+  let currentMode = 'morning';
+
+  const morningBg = document.getElementById('morning-bg');
+  const nightBg = document.getElementById('night-bg');
+  const morningHouse = document.getElementById('morning-house');
+  const nightHouse = document.getElementById('night-house');
+  const nightStars = document.getElementById('night-stars');
+  const sunGlow = document.getElementById('sun-glow');
+  const fogMorning = document.getElementById('fog-morning');
+  const fogNightMid = document.getElementById('fog-night-mid');
+  const fogBottomMorning = document.getElementById('fog-bottom-morning');
+  const fogBottomNight = document.getElementById('fog-bottom-night');
+  const vignetteMorning = document.getElementById('vignette-morning');
+  const vignetteNight = document.getElementById('vignette-night');
+  const switcher = document.getElementById('switcher');
+  const morningBgBtn = document.getElementById('morning-bg-btn');
+  const nightBgBtn = document.getElementById('night-bg-btn');
+  const morningLabel = document.getElementById('morning-label');
+  const nightLabel = document.getElementById('night-label');
+  const morningSub = document.getElementById('morning-sub');
+  const nightSub = document.getElementById('night-sub');
+  const line1 = document.getElementById('line1');
+  const line2 = document.getElementById('line2');
+  const heroDesc = document.getElementById('hero-desc');
+
+  function setMode(mode) {
+    currentMode = mode;
+    const isNight = mode === 'night';
+
+    // Background
+    morningBg.style.opacity = isNight ? '0' : '1';
+    nightBg.style.opacity = isNight ? '1' : '0';
+    morningHouse.style.opacity = isNight ? '0' : '1';
+    nightHouse.style.opacity = isNight ? '1' : '0';
+    nightStars.style.opacity = isNight ? '1' : '0';
+    sunGlow.style.opacity = isNight ? '0' : '1';
+    fogMorning.style.opacity = isNight ? '0' : '1';
+    fogNightMid.style.opacity = isNight ? '1' : '0';
+    fogBottomMorning.style.opacity = isNight ? '0' : '1';
+    fogBottomNight.style.opacity = isNight ? '1' : '0';
+    vignetteMorning.style.opacity = isNight ? '0' : '1';
+    vignetteNight.style.opacity = isNight ? '1' : '0';
+
+    // Switcher
+    switcher.style.background = isNight ? 'rgba(0,0,0,0.35)' : 'rgba(255,255,255,0.35)';
+    switcher.style.borderColor = isNight ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.6)';
+
+    morningBgBtn.style.opacity = isNight ? '0' : '1';
+    nightBgBtn.style.opacity = isNight ? '1' : '0';
+
+    morningLabel.style.color = isNight ? 'rgba(255,255,255,0.65)' : '#0b2414';
+    nightLabel.style.color = isNight ? '#ffffff' : 'rgba(11,36,20,0.65)';
+    morningSub.style.color = isNight ? 'rgba(255,255,255,0.4)' : 'rgba(11,36,20,0.6)';
+    nightSub.style.color = isNight ? 'rgba(255,255,255,0.7)' : 'rgba(11,36,20,0.5)';
+
+    // Heading
+    line1.style.color = isNight ? '#ffffff' : '#176c2d';
+    line2.style.color = isNight ? '#57c76a' : 'rgba(23,108,45,0.6)';
+
+    // Description
+    heroDesc.style.color = isNight ? 'rgba(255,255,255,0.8)' : 'rgba(11,36,20,0.75)';
+    heroDesc.textContent = isNight
+      ? "When the evening peak arrives, batteries discharge smoothly into high-price hours without manual panic."
+      : "SolarLifeStyle forecasts every sunrise across your portfolio and stores the surplus instead of selling it at the day's cheapest hour.";
+  }
+
+  // Scroll-based animation for the sticky container
+  const heroSection = document.getElementById('hero');
+  const bgLayer = document.getElementById('bg-layer');
+  const bgScale = document.getElementById('bg-scale');
+  const heroContent = document.getElementById('hero-content');
+  const scrollCurtain = document.getElementById('scroll-curtain');
+  const scrollText = document.getElementById('scroll-text');
+
+  function handleScroll() {
+    const rect = heroSection.getBoundingClientRect();
+    const heroHeight = heroSection.offsetHeight - window.innerHeight;
+    if (heroHeight <= 0) return;
+    const progress = Math.min(Math.max(-rect.top / heroHeight, 0), 1);
+
+    // Clip path zoom-out as you scroll
+    const inset = progress * 6;
+    const radius = progress * 32;
+    bgLayer.style.clipPath = `inset(${inset}% ${inset}% ${inset}% ${inset}% round ${radius}px)`;
+    bgScale.style.transform = `scale(${1 - progress * 0.08})`;
+
+    // Fade out content
+    heroContent.style.opacity = Math.max(0, 1 - progress * 1.6);
+
+    // Scroll curtain
+    const curtainOpacity = Math.max(0, (progress - 0.4) * 1.8);
+    scrollCurtain.style.opacity = curtainOpacity;
+
+    // "Every megawatt" text
+    const textOpacity = progress > 0.45 ? Math.min(1, (progress - 0.45) * 2.8) : 0;
+    const textScale = 0.92 + progress * 0.08;
+    const textBlur = Math.max(0, (0.8 - progress) * 12);
+    scrollText.style.opacity = textOpacity;
+    scrollText.style.transform = `translateY(-50%) scale(${textScale})`;
+    scrollText.style.filter = `blur(${textBlur}px)`;
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
+</body>
+</html>

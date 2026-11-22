@@ -1,0 +1,378 @@
+[
+  {
+    "url": "https://analytics.modulify.ai/js/pa-15aAsLEWAJ28eWV8XsWJP.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_external/analytics.modulify.ai/js/pa-15aAsLEWAJ28eWV8XsWJP.js",
+    "size": 6204
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-house-night.jpg&w=1080&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 28528
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-house-morning.jpg&w=1080&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 28640
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-house-night.jpg&w=1920&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 94472
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-house-morning.jpg&w=1920&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 88030
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-turbine.jpg&w=256&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 3596
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fsolar-array.jpg&w=256&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 3914
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhills-mist.jpg&w=256&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 10232
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhills-mist.jpg&w=1920&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 204302
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fhero-turbine.jpg&w=1920&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 161196
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fforest-fog.jpg&w=1200&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 9352
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fabout-wind-farm.jpg&w=1080&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 37734
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/image?url=%2Fimages%2Fsolar-array.jpg&w=1080&q=75",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/_next/image.webp",
+    "size": 52772
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/16Xw3XTGHog5fju_ME76p/_buildManifest.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/16Xw3XTGHog5fju_ME76p/_buildManifest.js",
+    "size": 592
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/16Xw3XTGHog5fju_ME76p/_clientMiddlewareManifest.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/16Xw3XTGHog5fju_ME76p/_clientMiddlewareManifest.js",
+    "size": 96
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/16Xw3XTGHog5fju_ME76p/_ssgManifest.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/16Xw3XTGHog5fju_ME76p/_ssgManifest.js",
+    "size": 76
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0.su~x6700u8p.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0.su~x6700u8p.js",
+    "size": 55529
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0~0p9itnw1yf3.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0~0p9itnw1yf3.js",
+    "size": 133267
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/03ku7v3hell.g.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/03ku7v3hell.g.js",
+    "size": 309
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/04muc_4esupvo.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/04muc_4esupvo.js",
+    "size": 135849
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0b7yzmvu8s8od.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0b7yzmvu8s8od.js",
+    "size": 44051
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0h3_68fclxhkc.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0h3_68fclxhkc.js",
+    "size": 29498
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0hze2si05x7uf.css",
+    "status": 200,
+    "mimeType": "text/css",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/_next/static/chunks/0hze2si05x7uf.css",
+    "size": 100790
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0q4u002.zojz_.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0q4u002.zojz_.js",
+    "size": 63621
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0qv.~-zv3p9mp.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0qv.~-zv3p9mp.js",
+    "size": 29498
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0r2wel34e0__q.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0r2wel34e0__q.js",
+    "size": 925687
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0uw~ov22uo1v0.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0uw~ov22uo1v0.js",
+    "size": 44920
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/0zrtsavdaxxjs.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/0zrtsavdaxxjs.js",
+    "size": 133267
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/106q8zwicj942.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/106q8zwicj942.js",
+    "size": 210720
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/10kavi7v~24jp.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/10kavi7v~24jp.js",
+    "size": 48399
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/13wd_.1t72~cs.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/13wd_.1t72~cs.js",
+    "size": 338
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/turbopack-0.ddoutjh086f.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/turbopack-0.ddoutjh086f.js",
+    "size": 10652
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/turbopack-0q2oun2avt3zp.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/turbopack-0q2oun2avt3zp.js",
+    "size": 10685
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/chunks/turbopack-0xs9tata1j8zf.js",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/_next/static/chunks/turbopack-0xs9tata1j8zf.js",
+    "size": 10686
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/media/0c89a48fa5027cee-s.p.0rd3rjvnnhw7n.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/_next/static/media/0c89a48fa5027cee-s.p.0rd3rjvnnhw7n.woff2",
+    "size": 22320
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2",
+    "size": 36980
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2",
+    "size": 40480
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/favicon.svg",
+    "status": 200,
+    "mimeType": "image/svg+xml",
+    "resourceType": "other",
+    "localFile": "mirror/favicon.svg",
+    "size": 435
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/about-wind-farm.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/about-wind-farm.jpg",
+    "size": 1462763
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/forest-fog.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/forest-fog.jpg",
+    "size": 356722
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/hero-house-morning.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/hero-house-morning.jpg",
+    "size": 2861640
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/hero-house-night.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/hero-house-night.jpg",
+    "size": 2689767
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/hero-turbine.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/hero-turbine.jpg",
+    "size": 3003937
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/hills-mist.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/hills-mist.jpg",
+    "size": 2481935
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/images/solar-array.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/images/solar-array.jpg",
+    "size": 2442464
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/index.html",
+    "size": 196870
+  },
+  {
+    "url": "https://SolarLifeStyle.modulify.website/privacy",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/privacy/index.html",
+    "size": 34781
+  }
+]

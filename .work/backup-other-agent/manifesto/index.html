@@ -1,0 +1,246 @@
+<!-- Standalone section: Manifesto (Why SolarLifeStyle) - Use in other projects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifesto Section – SolarLifeStyle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: #f4f5f1;
+      --foreground: #0e1a12;
+      --primary: #1e8538;
+      --leaf: #57c76a;
+      --leaf-soft: #ddf3d9;
+    }
+
+    body {
+      background: var(--background);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--foreground);
+      overflow-x: hidden;
+    }
+
+    .font-heading { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .manifesto-word {
+      display: inline-block;
+      transition: opacity 0.2s, transform 0.2s;
+      opacity: 0.12;
+      transform: translateY(0.18em);
+    }
+    .manifesto-word.lit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .manifesto-word.highlight { color: var(--primary); }
+    .manifesto-word.normal { color: var(--foreground); }
+
+    .pill-image {
+      display: inline-block;
+      position: relative;
+      height: 0.78em;
+      width: 1.9em;
+      overflow: hidden;
+      border-radius: 9999px;
+      vertical-align: -0.04em;
+      transition: clip-path 0.3s;
+    }
+    .pill-image-inner {
+      position: absolute;
+      inset: 0;
+      transform: scale(1.25);
+    }
+
+    /* Pill placeholder backgrounds */
+    .pill-turbine { background: linear-gradient(135deg, #6aaa6a 0%, #4a8a4a 50%, #2a6a2a 100%); }
+    .pill-hills   { background: linear-gradient(135deg, #8aba8a 0%, #5a9a5a 50%, #3a7a3a 100%); }
+    .pill-solar   { background: linear-gradient(135deg, #708090 0%, #4a90d9 50%, #1a6ab0 100%); }
+
+    .progress-bar-fill {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: linear-gradient(to right, #57c76a, #1e8538);
+      transform-origin: left;
+      transition: transform 0.1s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+<section id="manifesto" style="position:relative; background:var(--background); height:260svh;">
+  <div class="sticky top-0 flex h-svh items-center overflow-hidden">
+    <div style="width:100%; max-width:72rem; margin:0 auto; padding:3.5rem 1.5rem 0;">
+
+      <!-- Label row -->
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <h2 style="display:inline-flex; flex-shrink:0; align-items:center; gap:0.5rem; border-radius:9999px; background:white; padding:0.25rem 0.75rem; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.14em; color:rgba(14,26,18,0.7); box-shadow:0 0 0 1px rgba(0,0,0,0.05);">
+          <span style="width:0.375rem; height:0.375rem; border-radius:9999px; background:#1e8538; display:inline-block;"></span>
+          Why SolarLifeStyle
+        </h2>
+        <span style="height:1px; flex:1; background:rgba(14,26,18,0.1); display:block;"></span>
+      </div>
+
+      <!-- Manifesto paragraph -->
+      <p id="manifesto-text" class="font-heading" style="margin-top:2.5rem; font-size:clamp(1.75rem,3.5vw,3.75rem); font-weight:300; line-height:1.14; letter-spacing:-0.035em; display:flex; flex-wrap:wrap; align-items:baseline; gap:0.28em 0;">
+
+        <span class="manifesto-word normal" data-idx="0">Renewables</span>
+        <span class="manifesto-word normal" data-idx="1">rarely</span>
+        <span class="manifesto-word normal" data-idx="2">run</span>
+        <span class="manifesto-word normal" data-idx="3">short</span>
+        <span class="manifesto-word normal" data-idx="4">of</span>
+        <span class="manifesto-word normal" data-idx="5">power.</span>
+
+        <span class="pill-image" data-idx="6" style="clip-path: inset(0% 100% 0% 0% round 999px);">
+          <span class="pill-image-inner pill-turbine" style="border-radius:9999px;">
+            <svg viewBox="0 0 60 30" style="width:100%;height:100%;opacity:0.6;" fill="none"><circle cx="30" cy="15" r="4" fill="white"/><line x1="30" y1="11" x2="30" y2="2" stroke="white" stroke-width="2"/><line x1="30" y1="15" x2="38" y2="8" stroke="white" stroke-width="2"/><line x1="30" y1="15" x2="22" y2="22" stroke="white" stroke-width="2"/></svg>
+          </span>
+        </span>
+
+        <span class="manifesto-word highlight" data-idx="7">They</span>
+        <span class="manifesto-word highlight" data-idx="8">run</span>
+        <span class="manifesto-word highlight" data-idx="9">short</span>
+        <span class="manifesto-word highlight" data-idx="10">of</span>
+        <span class="manifesto-word highlight" data-idx="11">timing.</span>
+        <span class="manifesto-word normal" data-idx="12">SolarLifeStyle</span>
+        <span class="manifesto-word normal" data-idx="13">reads</span>
+        <span class="manifesto-word normal" data-idx="14">the</span>
+        <span class="manifesto-word normal" data-idx="15">weather,</span>
+
+        <span class="pill-image" data-idx="16" style="clip-path: inset(0% 100% 0% 0% round 999px);">
+          <span class="pill-image-inner pill-hills" style="border-radius:9999px;">
+            <svg viewBox="0 0 60 30" style="width:100%;height:100%;opacity:0.5;" fill="white"><path d="M0 25 Q15 10 30 20 Q45 30 60 15 V30 H0Z"/></svg>
+          </span>
+        </span>
+
+        <span class="manifesto-word normal" data-idx="17">the</span>
+        <span class="manifesto-word normal" data-idx="18">grid</span>
+        <span class="manifesto-word normal" data-idx="19">and</span>
+        <span class="manifesto-word normal" data-idx="20">the</span>
+        <span class="manifesto-word normal" data-idx="21">market</span>
+        <span class="manifesto-word normal" data-idx="22">as</span>
+        <span class="manifesto-word normal" data-idx="23">one</span>
+        <span class="manifesto-word normal" data-idx="24">system,</span>
+        <span class="manifesto-word normal" data-idx="25">so</span>
+        <span class="manifesto-word normal" data-idx="26">every</span>
+        <span class="manifesto-word normal" data-idx="27">megawatt</span>
+
+        <span class="pill-image" data-idx="28" style="clip-path: inset(0% 100% 0% 0% round 999px);">
+          <span class="pill-image-inner pill-solar" style="border-radius:9999px;">
+            <svg viewBox="0 0 60 30" style="width:100%;height:100%;opacity:0.5;" fill="none"><rect x="10" y="8" width="10" height="8" rx="1" fill="white"/><rect x="22" y="8" width="10" height="8" rx="1" fill="white"/><rect x="34" y="8" width="10" height="8" rx="1" fill="white"/><rect x="10" y="18" width="10" height="8" rx="1" fill="white"/><rect x="22" y="18" width="10" height="8" rx="1" fill="white"/><rect x="34" y="18" width="10" height="8" rx="1" fill="white"/></svg>
+          </span>
+        </span>
+
+        <span class="manifesto-word normal" data-idx="29">you</span>
+        <span class="manifesto-word normal" data-idx="30">make</span>
+        <span class="manifesto-word normal" data-idx="31">lands</span>
+        <span class="manifesto-word normal" data-idx="32">in</span>
+        <span class="manifesto-word normal" data-idx="33">the</span>
+        <span class="manifesto-word normal" data-idx="34">hour</span>
+        <span class="manifesto-word highlight" data-idx="35">it</span>
+        <span class="manifesto-word highlight" data-idx="36">pays</span>
+        <span class="manifesto-word highlight" data-idx="37">the</span>
+        <span class="manifesto-word highlight" data-idx="38">most.</span>
+      </p>
+
+      <!-- Progress bar -->
+      <div aria-hidden="true" style="margin-top:3.5rem; display:flex; align-items:center; gap:1rem;">
+        <span class="font-mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.14em; color:#58635a;">Energy timed</span>
+        <span style="position:relative; height:0.25rem; flex:1; overflow:hidden; border-radius:9999px; background:#ddf3d9;">
+          <span class="progress-bar-fill" id="progress-fill" style="transform:scaleX(0);"></span>
+        </span>
+        <span class="font-mono" id="progress-pct" style="width:3rem; text-align:right; font-size:0.875rem; color:#0e1a12; font-variant-numeric:tabular-nums;">0%</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div style="height:100px; background:var(--background);"></div>
+
+<script>
+  const section = document.getElementById('manifesto');
+  const words = document.querySelectorAll('.manifesto-word');
+  const pills = document.querySelectorAll('.pill-image');
+  const progressFill = document.getElementById('progress-fill');
+  const progressPct = document.getElementById('progress-pct');
+
+  const totalTokens = 39; // total items including pills
+
+  function getItemIdx(el) {
+    return parseInt(el.getAttribute('data-idx'), 10);
+  }
+
+  function handleScroll() {
+    const rect = section.getBoundingClientRect();
+    const totalDist = section.offsetHeight - window.innerHeight;
+    if (totalDist <= 0) return;
+    const raw = -rect.top / totalDist;
+    const progress = Math.min(Math.max(raw, 0), 1);
+
+    // Update words
+    words.forEach(word => {
+      const idx = getItemIdx(word);
+      const threshold = (idx + 0.5) / totalTokens;
+      const isLit = progress >= threshold;
+      const ratio = Math.min(Math.max((progress - threshold + 0.1) / 0.15, 0), 1);
+
+      if (isLit) {
+        word.classList.add('lit');
+      } else {
+        word.classList.remove('lit');
+      }
+    });
+
+    // Update pills
+    pills.forEach(pill => {
+      const idx = getItemIdx(pill);
+      const threshold = (idx + 0.5) / totalTokens;
+      const ratio = Math.min(Math.max((progress - threshold + 0.1) / 0.15, 0), 1);
+      const clipRight = Math.max(0, 100 - ratio * 100);
+      pill.style.clipPath = `inset(0% ${clipRight}% 0% 0% round 999px)`;
+    });
+
+    // Update progress bar
+    progressFill.style.transform = `scaleX(${progress})`;
+    progressPct.textContent = Math.round(progress * 100) + '%';
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Demo: auto-animate for standalone preview
+  let demoProgress = 0;
+  let demoDir = 1;
+  function demo() {
+    // Only animate if not scrolling
+    if (window.scrollY === 0) {
+      demoProgress += 0.004 * demoDir;
+      if (demoProgress >= 1) demoDir = -1;
+      if (demoProgress <= 0) demoDir = 1;
+
+      words.forEach(word => {
+        const idx = getItemIdx(word);
+        const threshold = (idx + 0.5) / totalTokens;
+        if (demoProgress >= threshold) word.classList.add('lit');
+        else word.classList.remove('lit');
+      });
+      pills.forEach(pill => {
+        const idx = getItemIdx(pill);
+        const threshold = (idx + 0.5) / totalTokens;
+        const ratio = Math.min(Math.max((demoProgress - threshold + 0.1) / 0.15, 0), 1);
+        const clipRight = Math.max(0, 100 - ratio * 100);
+        pill.style.clipPath = `inset(0% ${clipRight}% 0% 0% round 999px)`;
+      });
+      progressFill.style.transform = `scaleX(${demoProgress})`;
+      progressPct.textContent = Math.round(demoProgress * 100) + '%';
+    }
+    requestAnimationFrame(demo);
+  }
+  demo();
+</script>
+</body>
+</html>
