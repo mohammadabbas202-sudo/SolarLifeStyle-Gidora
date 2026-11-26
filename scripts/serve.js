@@ -66,8 +66,8 @@ function createServer(mirrorDir = MIRROR_DIR) {
     if (textExtensions.has(path.extname(filePath).toLowerCase())) {
       let html = fs.readFileSync(filePath, 'utf8').replaceAll('SolarLifeStyle', 'SolarLifeStyle');
 
-      if (path.basename(filePath) === 'index.html') {
-        html = html.replace('</body>', '<script src="/hero-title-override.js"></script><script src="/insights-heading-override.js"></script><script src="/how-it-works-copy-override.js"></script><script src="/footer-override.js"></script><script src="/remove-platform-sections.js"></script></body>');
+      if (path.basename(filePath) === 'index.html' && !html.includes('/hero-title-override.js')) {
+        html = html.replace('</body>', '<script src="/deployment-compat-override.js"></script><script src="/hero-title-override.js"></script><script src="/insights-heading-override.js"></script><script src="/how-it-works-copy-override.js"></script><script src="/footer-override.js"></script><script src="/remove-platform-sections.js"></script></body>');
       }
 
       res.writeHead(200, {
